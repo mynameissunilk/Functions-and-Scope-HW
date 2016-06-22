@@ -68,7 +68,7 @@ public class Main {
     public static void setStoreName(String name) {
         // update the value of mStoreName, then explain in a comment why you can access that variable
         // from within the scope of this method, since mStoreName is NOT local to this method.
-        mStoreName = name; // mstorename is static but it isn't private... I'm wondering why it shouldn't be  private, so a class-local "setter" can set it? Might be the Java kool-aid in my case.
+        mStoreName = name;
     }
 
 
@@ -138,18 +138,18 @@ public class Main {
     public static double getBulkDiscount(int quantityPurchased) {
         // there are multiple ways to do this - we discussed a situation where the remainder from
         // division is truncated (removed). Can you use that to help you here?
-        double percentage = 0.0;
-        for(int i = 0; i < quantityPurchased; i = i + 5){
-            if(i % quantityPurchased !=0)
-                percentage = percentage + 0.05;
+
+        for (int  qpurch = 0; qpurch < quantityPurchased; qpurch = qpurch + 5) {
+	    double returnvalue = 0; 
+	    returnvalue  = returnvalue + 0.05;
         }
-        return percentage;
+        return returnvalue;
     }
 
 
     /**
      * This method should print each item on the screen, all on one line. The number of items can vary.
-     * They items can be separated by spaces, commas, slashes, or whatever delimiter you like.
+     * These items can be separated by spaces, commas, slashes, or whatever delimiter you like.
      *
      * @param items, a sequence of Strings
      */
@@ -157,8 +157,7 @@ public class Main {
         // In order to print each item you'll need to loop through all the items.
         // We haven't covered loops yet, so challenge yourself to figure it out by googling.
         // If you don't get it, no worries! We'll cover loops tomorrow.
-        for(int i = 0; i = items.length-1; i++)
-            System.out.println("Item Number: " + i + " " + items[i]);
-
+	
+	
     }
 }
